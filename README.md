@@ -20,16 +20,61 @@ Source: Kaggle
 - Opening Weekend Gross in US & Canada: The amount generated during the initial weekend of the movie's release in the United States and Canada.
 
 ### Task list
-Load the IMDb data.
-Using the Pandas dataframe drop function, get rid of unnecessary columns.
-identify the number of missing values within each column.
-Replace "N/A", "NaN", and "Null" with an empty string.
+- Load the IMDb data.
+- Using the Pandas dataframe drop function, get rid of unnecessary columns.
+- Identify the number of missing values within each column.
+- Replace "N/A", "NaN", and "Null" with an empty string.
 Format Columns to floats:
- runtime from hours to minutes, release year, rating, number of ratings
- floats in millions - Budget,gross worldwide, gross usa and canada, Opening Weekend Gross in US & Canada(split in 2 columns)  
+ - Runtime from hours to minutes, release year, rating, number of ratings
+ - Floats in millions - Budget,gross worldwide, gross usa and canada, Opening Weekend Gross in US & Canada(split in 2 columns)  
 Drop unecessary columns
 
 Output the cleaned up file onto a new csv called "IMDB_clean.csv".
 
 Next: Exploration in Python and Tableau
+
+## Exploration part 1 - in Python
+- Descriptive statistics
+- Distribution of continuous/numerical data i.e movie ratings, runtimes etc
+
+## Part 2 - in Tableau 
+- Exploring Categorical data i.e Top 20 titles by Gross worldwide, runtime distribution by genre, number of releases by year etc
+
+## Chi Squared tests
+### Motion picture rating(R, PG, 13+ ETC) vs main genres
+- Splitting the genres and counting the occurrences of each genre
+- Simplifying the genre data to include only the primary genre if it's one of the selected genres
+- The contingency table for Motion Picture Rating vs. Primary Genre
+- Focusing the Chi-square test on a subset of the most common motion picture ratings (e.g., G, PG, PG-13, R)
+
+Heatmap 
+The color intensity represents the number of movies in each category, with lighter colors indicating fewer movies and darker colors indicating more movies.
+The genres are listed on the y-axis: Action, Adventure, Comedy, Drama, Other, and Thriller.
+The motion picture ratings are listed on the x-axis: G, PG, PG-13, and R.
+
+Key observations:
+
+The "Other" genre has the highest count of R-rated movies, followed by Comedy and Drama.
+PG-13 movies are most common in the Comedy genre, closely followed by the "Other" category.
+G-rated movies are least common across all genres, with no G-rated movies in the Thriller category.
+Adventure and Drama genres have a relatively balanced distribution across PG and PG-13 ratings.
+This heatmap provides a quick and clear overview of the dataset, making it easy to spot which combinations of genre and rating are most or least common.
+
+## K-Means clustering
+Features selected
+ - Gross worldwide (in millions)
+ - Budget (in millions)
+Outliers identified with IQR - defining bounds for what's considered an acceptable range then dropping the rows where at least one element is NaN after outlier removal
+
+### Elbow Method and silhouette score
+Used to determine the optimal number of clusters - in this case 4
+Calculating the silhouette score to determine if the clustering structure is strong enough. 
+  In the context of silhouette scores, which range from -1 to 1:
+
+Scores closer to 1 indicate excellent cluster cohesion and separation. A score above 0.6 is generally considered good, implying that the clusters are well-distinguished from each other and that data points are well-matched to their clusters.
+A score of 
+0.6267967413893265
+0.6267967413893265 means the clustering algorithm has successfully identified the underlying pattern, resulting in clusters that are both meaningful and distinct.
+This score suggests that, on average, data points are much closer to their own cluster members than to those of the nearest neighboring cluster. It reflects well-separated clusters and a good fit between the data points and their assigned clusters.
+
 
