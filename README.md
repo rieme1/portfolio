@@ -67,7 +67,7 @@ Features selected
 Outliers identified with IQR - defining bounds for what's considered an acceptable range then dropping the rows where at least one element is NaN after outlier removal
 
 ### Elbow Method and silhouette score
-Used to determine the optimal number of clusters - in this case 4
+Used to determine the optimal number of clusters - in this case 2
 Calculating the silhouette score to determine if the clustering structure is strong enough. 
   In the context of silhouette scores, which range from -1 to 1:
 
