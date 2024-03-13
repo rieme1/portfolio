@@ -78,11 +78,13 @@ This score suggests that, on average, data points are much closer to their own c
 
 ### Results and possible developments
 Cluster Characteristics:
-The yellow cluster, predominantly at the lower end of both budget and gross worldwide scales, could indicate a group of items that are possibly low-budget productions or ones that didn’t achieve high revenues. This cluster is denser and seems to contain more items than the purple cluster, suggesting there are more items with these characteristics in your dataset.
-The purple cluster is more spread out and covers a wider range of gross worldwide earnings and budgets. This could indicate a more varied group of items, possibly mid to high-budget productions, or ones that had varying levels of success in terms of revenue.
+ - The yellow cluster, predominantly at the lower end of both budget and gross worldwide scales, could indicate a group of items that are possibly low-budget productions or ones that didn’t achieve high revenues. This cluster is denser and seems to contain more items than the purple cluster, suggesting there are more items with these characteristics in your dataset.
+- The purple cluster is more spread out and covers a wider range of gross worldwide earnings and budgets. This could indicate a more varied group of items, possibly mid to high-budget productions, or ones that had varying levels of success in terms of revenue.
+  
 Outliers:
-There appear to be potential outliers, especially in the purple cluster, where a few points lie far from the main cluster body. This might indicate exceptional items with significantly higher revenues or budgets compared to the rest.
+- There appear to be potential outliers, especially in the purple cluster, where a few points lie far from the main cluster body. This might indicate exceptional items with significantly higher revenues or budgets compared to the rest.
+
 Density and Distribution:
-The density of points is higher at the lower end of the budget and gross worldwide scales, which tapers off as the values increase. This is a common distribution in many financial datasets, where a large number of items have low to moderate values, while few have very high values.
+- The density of points is higher at the lower end of the budget and gross worldwide scales, which tapers off as the values increase. This is a common distribution in many financial datasets, where a large number of items have low to moderate values, while few have very high values.
 Cluster Overlap:
-There's a slight overlap between clusters, particularly in the middle range of the plot. It might be worth examining these items more closely to see if they share any unique characteristics that aren’t captured by the budget and gross revenue features alone.
+- There's a slight overlap between clusters, particularly in the middle range of the plot. It might be worth examining these items more closely to see if they share any unique characteristics that aren’t captured by the budget and gross revenue features alone.
